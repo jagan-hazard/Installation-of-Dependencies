@@ -132,7 +132,7 @@ Step 6: LINK OPENCV WITH PYTHON (VERY IMPORTANT)
       ............................................................................
       
       # Inorder to find where our cv2.so file located
-      #It should output paths similar to one of these (or two in case OpenCV was compiled for both Python2 and Python3):
+      # Below command should output paths similar to one of these (or two in case OpenCV was compiled for both Python2 and          Python3):
       ................................................................................................................
       find /usr/local/lib/ -type f -name "cv2*.so"
       
