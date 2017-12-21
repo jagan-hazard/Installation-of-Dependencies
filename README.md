@@ -200,10 +200,10 @@ NOTE: we need python and opencv installed.
            Theano is an open-source symbolic tensor manipulation framework developed by LISA Lab at Université de Montréal.
            CNTK is an open-source toolkit for deep learning developed by Microsoft.
         
-    After installing keras, when we tried to import keras using python it won't import
+    After installing keras, when we tried to import keras using python it won't import.
     (if we haven't installed tensorfow previously).
      
-    you have find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend row.
+    you have to find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend column.
           
           Contents in keras.json file (contents may varies depending upon ur keras versions i.e keras 1.0 or keras 2.0)
           -------------------------------------------------------------------------------------------------------------
@@ -216,23 +216,23 @@ NOTE: we need python and opencv installed.
         
         Using TensorFlow as backend
         ...........................
- |         In order to use tensorflow, we need minimum opencv 3.0 or higher verion of opencv. dont worry about for python version,
- |         both python 2.7 and python 3 or higher versions support tensorflow.
- |         
- |         To install TensorFlow, check this out https://www.tensorflow.org/install/install_linux
- |         
- |         step 1: open "keras.json" file
- |         step 2: change the backend as "tensorflow"
- |         step 3: save the file
+        |         In order to use tensorflow, we need minimum opencv 3.0 or higher verion of opencv. dont worry about for  
+        |           python version, both python 2.7 and python 3 or higher versions support tensorflow.
+        |         
+        |         To install TensorFlow, check this out https://www.tensorflow.org/install/install_linux
+        |         
+        |            step 1: open "keras.json" file
+        |            step 2: change the backend as "tensorflow"
+        |            step 3: save the file
 
 
         Using Theano as backend
         ...........................
- |         Theano is directly available. we dont need to install theano.
- |         
- |         step 1: open "keras.json" file
- |         step 2: change the backend as "theano"
- |         step 3: save the file
+        |         Theano is directly available. we dont need to install theano.
+        |         
+        |            step 1: open "keras.json" file
+        |            step 2: change the backend as "theano"
+        |            step 3: save the file
           
           
    Finaly, import keras in python depending on your backend, python will import keras. 
