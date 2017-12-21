@@ -158,3 +158,82 @@ NOW WE HAVE INSTALLED OPENCV AND LINKED IT WITH PYTHON
       python
       import cv2                     #if cv2 imported successfully,then you may installed everything cleanly
       print cv2.__version__          #for some python version use "print(cv2.__version__)"
+      
+      
+=============================================================================================================================
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+=============================================================================================================================
+
+INSTALLATION OF KERAS (on the day keras 2.0 was availble)
+===========================================================
+NOTE: we need python and opencv installed.
+
+  STEP 1:  INSTALLING KERAS   
+  ==========================
+    METHOD 1:
+    ==============
+        Installation using PYPI(i.e. using pip)
+        .......................................
+            sudo pip install keras      # If you are about to install in virtualenvironment, you may want to avoid using sudo
+
+    METHOD 2:
+    ==============
+        Installation using setup file(i.e. clone from github)
+        #navigte to the path you want to put your keras files
+        .....................................................
+            git clone https://github.com/fchollet/keras.git
+            cd keras
+            sudo python setup.py install
+        
+
+  STEP 2:  SWITCHING KERAS BACKEND(THEANO or TENSORFLOW)   
+  ================================
+    
+    BACKENDS
+    ==============
+        Keras uses three backends
+            1. Tensorflow
+            2. Theano
+            3. CNTK
+        
+           TensorFlow is an open-source symbolic tensor manipulation framework developed by Google.
+           Theano is an open-source symbolic tensor manipulation framework developed by LISA Lab at Université de Montréal.
+           CNTK is an open-source toolkit for deep learning developed by Microsoft.
+        
+    After installing keras, when we tried to import keras using python it won't import
+    (if we haven't installed tensorfow previously).
+     
+    you have find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend row.
+          
+          Contents in keras.json file (contents may varies depending upon ur keras versions i.e keras 1.0 or keras 2.0)
+          -------------------------------------------------------------------------------------------------------------
+           {
+              "image_data_format": "channels_last",
+              "epsilon": 1e-07,
+              "floatx": "float32",
+              "backend": "tensorflow"
+            }
+        
+        Using TensorFlow as backend
+        ...........................
+ |         In order to use tensorflow, we need minimum opencv 3.0 or higher verion of opencv. dont worry about for python version,
+ |         both python 2.7 and python 3 or higher versions support tensorflow.
+ |         
+ |         To install TensorFlow, check this out https://www.tensorflow.org/install/install_linux
+ |         
+ |         step 1: open "keras.json" file
+ |         step 2: change the backend as "tensorflow"
+ |         step 3: save the file
+
+
+        Using Theano as backend
+        ...........................
+ |         Theano is directly available. we dont need to install theano.
+ |         
+ |         step 1: open "keras.json" file
+ |         step 2: change the backend as "theano"
+ |         step 3: save the file
+          
+          
+   Finaly, import keras in python depending on your backend, python will import keras. 
+If you dont get any errors, you have installed keras successfully.
