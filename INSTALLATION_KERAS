@@ -39,26 +39,34 @@ NOTE: we need python and opencv installed.
      
     you have find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend row.
           
+          Contents in keras.json file (contents may varies depending upon ur keras versions i.e keras 1.0 or keras 2.0)
+          -------------------------------------------------------------------------------------------------------------
+           {
+              "image_data_format": "channels_last",
+              "epsilon": 1e-07,
+              "floatx": "float32",
+              "backend": "tensorflow"
+            }
         
         Using TensorFlow as backend
         ...........................
-          In order to use tensorflow, we need minimum opencv 3.0 or higher verion of opencv. dont worry about for python version,
-          both python 2.7 and python 3 or higher versions support tensorflow.
-          
-          To install TensorFlow, check this out https://www.tensorflow.org/install/install_linux
-          
-          step 1: open "keras.json" file
-          step 2: change the backend as "tensorflow"
-          step 3: save the file
+ |         In order to use tensorflow, we need minimum opencv 3.0 or higher verion of opencv. dont worry about for python version,
+ |         both python 2.7 and python 3 or higher versions support tensorflow.
+ |         
+ |         To install TensorFlow, check this out https://www.tensorflow.org/install/install_linux
+ |         
+ |         step 1: open "keras.json" file
+ |         step 2: change the backend as "tensorflow"
+ |         step 3: save the file
 
 
         Using Theano as backend
         ...........................
-          Theano is directly available. we dont need to install theano.
-          
-          step 1: open "keras.json" file
-          step 2: change the backend as "theano"
-          step 3: save the file
+ |         Theano is directly available. we dont need to install theano.
+ |         
+ |         step 1: open "keras.json" file
+ |         step 2: change the backend as "theano"
+ |         step 3: save the file
           
           
    Finaly, import keras in python depending on your backend, python will import keras. 
