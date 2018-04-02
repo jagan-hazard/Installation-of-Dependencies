@@ -59,7 +59,8 @@ Step 3 : Install Python libraries
           ############ For Python 2 ############
      |     
      |     # create virtual environment
-     |     mkvirtualenv cv2 -p python2  #here cv2 is user wish, u can give any name for virtual environment.be smart to remember it.
+     |     mkvirtualenv cv2 -p python2  #here cv2 is user wish, u can give any name for virtual environment.be 
+     smart to remember it.
      |     workon cv2  
      |     
      |     # now install python libraries within this virtual environment
@@ -71,7 +72,8 @@ Step 3 : Install Python libraries
   
           ############ For Python 3 ############
      |     # create virtual environment
-     |     mkvirtualenv cv3 -p python3   #here cv3 is user wish, u can give any name for virtual environment.be smart to remember it.
+     |     mkvirtualenv cv3 -p python3   #here cv3 is user wish, u can give any name for virtual environment.be
+     smart to remember it.
      |     workon cv3
      |  
      |     # now install python libraries within this virtual environment
@@ -132,7 +134,8 @@ Step 6: LINK OPENCV WITH PYTHON (VERY IMPORTANT)
       ............................................................................
       
       # Inorder to find where our cv2.so file located
-      # Below command should output paths similar to one of these (or two in case OpenCV was compiled for both Python2 and          Python3):
+      # Below command should output paths similar to one of these (or two in case OpenCV was compiled for
+      both Python2 and  Python3):
       ................................................................................................................
       find /usr/local/lib/ -type f -name "cv2*.so"
       
@@ -148,7 +151,9 @@ Step 6: LINK OPENCV WITH PYTHON (VERY IMPORTANT)
       cd ~/.virtualenvs/cv3/lib/python3.6/site-packages
       ln -s /usr/local/lib/python3.6/dist-packages/cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
       ...........
-      Note: If error occurs while linking the opencv with python3, kindly check the location of cv2.so and cv2.cpython-36m-x86_64-linux-gnu.so (in certain case the file name will be cv2.cpython-35m-x86_64-linux-gnu.so, which is based on python version) if ur system has python 3.5 as defaults, use the below command :
+      Note: If error occurs while linking the opencv with python3, kindly check the location of cv2.so and 
+      cv2.cpython-36m-x86_64-linux-gnu.so (in certain case the file name will be cv2.cpython-35m-x86_64-linux-gnu.so,
+      which is based on python version) if ur system has python 3.5 as defaults, use the below command :
       cd ~/.virtualenvs/cv3/lib/python3.5/site-packages
       ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so     
 ===========================================================================================================================     
@@ -207,7 +212,8 @@ NOTE: we need python and opencv installed.
     (if we haven't installed tensorfow previously).
      
     you have to find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend column.
-    In most of the case keras located in   /home/(user_pc_name)/.keras (user_pc_name is ur pc name, replace it with ur user name of pc)
+    In most of the case keras located in   /home/(user_pc_name)/.keras (user_pc_name is ur pc name, replace
+    it with ur user name of pc)
           
           Contents in keras.json file (contents may varies depending upon ur keras versions i.e keras 1.0 or keras 2.0)
           -------------------------------------------------------------------------------------------------------------
