@@ -50,8 +50,8 @@ Step 3 : Install Python libraries
       -------------------------------------------------------------------------------------
           # Install virtual environment
           ..............................
-          sudo pip2 install virtualenv virtualenvwrapper
-          sudo pip3 install virtualenv virtualenvwrapper
+          sudo -H pip2 install virtualenv virtualenvwrapper
+          sudo -H pip3 install virtualenv virtualenvwrapper
           echo "# Virtual Environment Wrapper"  >> ~/.bashrc
           echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
           source ~/.bashrc
@@ -147,7 +147,10 @@ Step 6: LINK OPENCV WITH PYTHON (VERY IMPORTANT)
       ......................................................................
       cd ~/.virtualenvs/cv3/lib/python3.6/site-packages
       ln -s /usr/local/lib/python3.6/dist-packages/cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
-     
+      ...........
+      Note: If error occurs while linking the opencv with python3, kindly check the location of cv2.so and cv2.cpython-36m-x86_64-linux-gnu.so (in certain case the file name will be cv2.cpython-35m-x86_64-linux-gnu.so, which is based on python version) if ur system has python 3.5 as defaults, use the below command :
+      cd ~/.virtualenvs/cv3/lib/python3.5/site-packages
+      ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so     
 ===========================================================================================================================     
 
 NOW WE HAVE INSTALLED OPENCV AND LINKED IT WITH PYTHON
@@ -204,6 +207,7 @@ NOTE: we need python and opencv installed.
     (if we haven't installed tensorfow previously).
      
     you have to find the locasion of .keras folder which contain "keras.json". we will change the keyword for backend column.
+    In most of the case keras located in   /home/(user_pc_name)/.keras (user_pc_name is ur pc name, replace it with ur user name of pc)
           
           Contents in keras.json file (contents may varies depending upon ur keras versions i.e keras 1.0 or keras 2.0)
           -------------------------------------------------------------------------------------------------------------
