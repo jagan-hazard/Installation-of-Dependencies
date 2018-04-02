@@ -154,6 +154,7 @@ Step 6: LINK OPENCV WITH PYTHON (VERY IMPORTANT)
       Note: If error occurs while linking the opencv with python3, kindly check the location of cv2.so and 
       cv2.cpython-36m-x86_64-linux-gnu.so (in certain case the file name will be cv2.cpython-35m-x86_64-linux-gnu.so,
       which is based on python version) if ur system has python 3.5 as defaults, use the below command :
+      ...................................
       cd ~/.virtualenvs/cv3/lib/python3.5/site-packages
       ln -s /usr/local/lib/python3.5/dist-packages/cv2.cpython-35m-x86_64-linux-gnu.so cv2.so     
 ===========================================================================================================================     
